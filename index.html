@@ -4,6 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-0EBQNLDYTG"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-0EBQNLDYTG');
+</script>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -15,16 +24,23 @@
 
     <title>Prime Care</title>
 
+    </head>
+    <body>
+
     <div class="container">
 
     <header>
+     
 
         <div class="top-bar">
 
         <img class="top-logo" src="./Web Assets/top-logo.png" alt="prime care logo">
 
         <div>
-        <a class="CTA-button" href="https://koalendar.com/e/prime-care-veterinary-hospital" class="top-link">Contact us</a>
+        <a class="CTA-button top-link" href="https://koalendar.com/e/prime-care-veterinary-hospital"  onclick="gtag('event', 'book_appointment_click', {
+     section: 'header',
+     landing_page: 'lp2'
+   });">Contact us</a>
         </div>
 
         </div>
@@ -105,7 +121,10 @@
                     <h3 class="service-title">VETERINARY CONSULTATION & CHECKUPS</h3>
                     <p class="service-description">Experienced veterinarians delivering accurate, trusted care for every pet.</p>
                     <p class="service-duration">~ 30 Minutes</p>
-                    <a href="https://koalendar.com/e/prime-care-veterinary-hospital" class="service-button">CONTACT US</a>
+                    <a href="https://koalendar.com/e/prime-care-veterinary-hospital" class="service-button"   onclick="gtag('event', 'book_appointment_click', {
+     section: 'services',
+     landing_page: 'lp2'
+   });">CONTACT US</a>
                 </div>
             </div>
 
@@ -115,7 +134,10 @@
                     <h3 class="service-title">VACCINATIONS & PREVENTIVE CARE</h3>
                     <p class="service-description">Safe, gentle vaccines tailored to your pet's age and health.</p>
                     <p class="service-duration">~ 15 Minutes</p>
-                    <a href="https://koalendar.com/e/prime-care-veterinary-hospital" class="service-button">CONTACT US</a>
+                    <a href="https://koalendar.com/e/prime-care-veterinary-hospital" class="service-button"  onclick="gtag('event', 'book_appointment_click', {
+     section: 'services',
+     landing_page: 'lp2'
+   });">CONTACT US</a>
                 </div>
             </div>
 
@@ -125,7 +147,10 @@
                     <h3 class="service-title">DIAGNOSTICS & BASIC TREATMENT</h3>
                     <p class="service-description">Advanced testing and imaging for accurate diagnosis and effective treatment plans.</p>
                     <p class="service-duration">~ 45-60 Minutes</p>
-                    <a href="https://koalendar.com/e/prime-care-veterinary-hospital" class="service-button">CONTACT US</a>
+                    <a href="https://koalendar.com/e/prime-care-veterinary-hospital" class="service-button"  onclick="gtag('event', 'book_appointment_click', {
+     section: 'services',
+     landing_page: 'lp2'
+   });">CONTACT US</a>
                 </div>
             </div>
 
@@ -135,7 +160,10 @@
                     <h3 class="service-title">IN-PATIENT & SURGICAL CARE</h3>
                     <p class="service-description">Specialized treatment, hospitalization, and surgery by an experienced veterinary team.</p>
                     <p class="service-duration">~ Several Hours to Days</p>
-                    <a href="https://koalendar.com/e/prime-care-veterinary-hospital" class="service-button">CONTACT US</a>
+                    <a href="https://koalendar.com/e/prime-care-veterinary-hospital" class="service-button"  onclick="gtag('event', 'book_appointment_click', {
+     section: 'services',
+     landing_page: 'lp2'
+   });">CONTACT US</a>
                 </div>
             </div>
             </div>
@@ -271,7 +299,10 @@
                 </div>
             </div>
             
-            <a class="contact-button" href="https://koalendar.com/e/prime-care-veterinary-hospital">CONTACT US</a>
+            <a class="contact-button" href="https://koalendar.com/e/prime-care-veterinary-hospital"  onclick="gtag('event', 'book_appointment_click', {
+     section: 'footer',
+     landing_page: 'lp2'
+   });">CONTACT US</a>
         </section>
 
     </main>
@@ -279,8 +310,8 @@
  
      
     </div> 
-</head>
-<body>
+
+
     
 </body>
 </html>
