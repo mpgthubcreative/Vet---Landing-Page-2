@@ -363,12 +363,13 @@ header{
     display: inline-flex;
     flex-direction: column;
     background-color: #ffffff;
-    overflow: hidden;
+    /* border-radius: 0.8rem; */
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
     width: 35.6rem;
     margin-left: 2rem;
     vertical-align: top;
     white-space: normal;
+    overflow: hidden;
 }
 
 /* .service-item:first-child {
@@ -379,18 +380,89 @@ header{
     margin-right: 3.5rem;
 } */
 
+.service-image-wrapper {
+    position: relative;
+    width: 100%;
+    height: 28rem;
+    overflow: hidden;
+}
+
 .service-img {
     width: 100%;
-    height: 20rem;
+    height: 100%;
     object-fit: cover;
     display: block;
-    border-radius: 0.8rem 0.8rem 0 0;
+    transition: transform 0.3s ease;
+}
+
+.service-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 113, 141, 0.9);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+}
+
+.service-item.active .service-overlay,
+.service-item:hover .service-overlay {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.service-overlay-button {
+    background-color: #ffffff;
+    color: #00718D;
+    padding: 1.2rem 3rem;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 1.4rem;
+    border-radius: 0.5rem;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 0.7px;
+}
+
+.service-overlay-button:hover {
+    background-color: #F92F2E;
+    color: #ffffff;
+    transform: scale(1.05);
+}
+
+/* Always-visible service booking button */
+.service-visible-button {
+    display: inline-block;
+    margin-top: 1.5rem;
+    background-color: #F92F2E;
+    color: #fff;
+    padding: 1.2rem 3rem;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 1.4rem;
+    border-radius: 0.5rem;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 0.7px;
+    box-shadow: 0 2px 8px rgba(249, 47, 46, 0.08);
+    border: none;
+    cursor: pointer;
+}
+
+.service-visible-button:hover {
+    background-color: #d92726;
+    color: #fff;
+    transform: scale(1.05);
+    box-shadow: 0 4px 12px rgba(249, 47, 46, 0.18);
 }
 
 .service-content {
-    padding: 2rem 1rem 0rem 2rem;
-    margin-bottom: 2rem;
-    /* width: 32rem; */
+    padding: 2rem 2rem 2rem 2rem;
 }
 
 .service-title {
@@ -404,27 +476,17 @@ header{
 
 .service-description {
     font-size: 1.2rem;
-    margin-bottom: 1.5rem;
+    margin-bottom: 1rem;
     line-height: 1.5;
     font-weight: 400;
+    color: #333333;
 }
 
 .service-duration {
-    font-size: 1.3rem;
-    margin-bottom: 2rem;
-    letter-spacing: .65px;
-}
-
-.service-button {
-    display: inline-block;
-    background-color: #F92F2E;
-    color: #ffffff;
-    padding: 1.2rem 3rem;
-    text-decoration: none;
-    font-weight: 600;
     font-size: 1.2rem;
-    width: 100%;
-    text-align: center;
+    letter-spacing: .6px;
+    color: #666666;
+    font-weight: 500;
 }
 
 /* Testimonials Section */
